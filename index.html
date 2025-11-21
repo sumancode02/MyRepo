@@ -9,14 +9,26 @@
 </head>
 
 <body>
-    <h1>Suman Balampaki Magar</h1>
-    <p>I am an international student studying Business Information Technology at the Laurea University of Applied
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am an international student studying Business Information Technology at the Laurea University of Applied
         Sciences. Originally from Nepal, I have a passion for technology and its applications in business. I have been
         living here in Helsinki for about 4 months. So far it has been a great experience.</p>
-
-    <img src="file:///C:/Users/ACER/Pictures/iphone%20Photos/202305__/IMG_E7728.JPG"
-        alt="Me with typical nepali dress deura suruwal" />
-
+        <img src="image.JPG" alt="Me with typical nepali dress deura suruwal" />
+        </section>
+    </main>
     <div>
         <h2>My Interests</h2>
         <ol>
@@ -36,23 +48,38 @@
 
     <a href="https://www.laurea.fi/en/">Laurea University of Applied Sciences</a>
 
-    <table style="margin: 20px;">
+    <table>
         <tr>
             <th>Course</th>
             <th>Credits</th>
         </tr>
         <tr>
-            <td>Bachelor of Business Information Technology</td>
-            <td>210</td>
+            <td>Basics of degital services</td>
+            <td>5</td>
         </tr>
         <tr>
-            <td>Bachelor of International Business</td>
-            <td>210</td>
+            <td>Website development</td>
+            <td>5</td>
         </tr>
         <tr>
-            <td>Bachelor of Hospitality Management</td>
-            <td>180</td>
+            <td>uilding one's own competence</td>
+            <td>2</td>
     </table>
+    <div class="flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+    <div class="responsive-box">Resize the window to see the effect</div>
 
     <form>
         <label for="name">Name:</label><br>
@@ -63,6 +90,10 @@
         <textarea id="comment" name="comment"></textarea><br><br>
         <input type="submit" value="Submit">
     </form>
+
+    <footer>
+        <p>Copyright 2025</p>
+    </footer>
 
 </body>
 
