@@ -1,116 +1,227 @@
-.flex-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .box {
-    background-color: lightblue;
-    padding: 20px;
-    text-align: center;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-  }
-  
-  .grid-item {
-    background-color: lightgreen;
-    padding: 20px;
-    text-align: center;
-  }
-  .responsive-box {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  @media (max-width: 600px) {
-    .responsive-box {
-      background-color: lightcoral;
-    }
-  }
-  
-  @media (min-width: 601px) {
-    .responsive-box {
-      background-color: lightseagreen;
-    }
-  }
-
-h1 {
-    text-align: center;
-    color: green;
-    font-size: 2em;
-}
-
-p {
-    color: rgb(5, 4, 4);
-}
-
+/* Basic Reset and Global Styles */
 body {
-    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
 }
 
-div {
+main {
     padding: 20px;
-    margin: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+section, .media-query-box {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #007bff;
+}
+
+/*Navigation Styling */
+.responsive-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display links side-by-side on desktop */
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-list li a:hover {
+    background-color: #555;
+}
+
+.menu-toggle {
+    display: none; /* Hide the menu button on desktop */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+/* About Section and Images*/
+.profile-image {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*Interests Section */
+.lists-container {
+    display: flex;
+    gap: 40px;
+}
+
+.ordered-list, .unordered-list {
+    flex: 1;
+}
+
+/*Table Styling*/
 table {
-    width: 50%;
+    width: 100%;
     border-collapse: collapse;
-    margin: 20px
+    margin: 20px 0;
 }
 
-th,
-td {
+th, td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
     text-align: left;
 }
 
 th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-form {
-    max-width: 400px;
-    width: 100%;
-    margin: 10px auto;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-label {
+tfoot td {
     font-weight: bold;
+    background-color: #e9ecef;
 }
 
-input[type="text"],
-input[type="email"] {
-    padding: 8px;
+
+/*Flexbox Layout*/
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #007bff;
+}
+
+.box {
+    padding: 20px;
+    background-color: #add8e6;
+    color: #333;
+    flex-grow: 1; /* Allows boxes to grow and take equal space */
+    text-align: center;
+}
+
+/*Grid Layout*/
+.grid-container {
+    display: grid;
+    /* Create 3 equal columns, repeat(3, 1fr) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #28a745;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: #90ee90;
+    color: #333;
+    text-align: center;
+}
+
+/*Simple Responsive Columns*/
+.responsive-container {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1; /* Distributes space equally */
+    padding: 15px;
+    background-color: #ffc107;
+    text-align: center;
+}
+
+/*Responsive Image*/
+.responsive-image {
+    max-width: 100%; /* Image will scale down if necessary */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
+}
+
+form {
+    background: #f9f9f9;
+    padding: 20px;
     border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
 }
-footer{
+
+footer {
+    background: #333;
+    color: #fff;
     text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
+/* Tablets and small desktops (smaller than 768px) */
+.media-query-box {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+      .media-query-box {
+        background-color: lightcoral;
+      }
+    }
+    
+    @media (min-width: 601px) {
+      .media-query-box {
+        background-color: lightblue;
+      }
+    }
