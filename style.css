@@ -1,4 +1,3 @@
-/* Basic Reset and Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -21,7 +20,8 @@ main {
     margin: 0 auto;
 }
 
-section, .media-query-box {
+section,
+.media-query-box {
     margin-bottom: 30px;
     padding: 20px;
     background: #fff;
@@ -29,11 +29,12 @@ section, .media-query-box {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #007bff;
 }
 
-/*Navigation Styling */
 .responsive-nav {
     display: flex;
     justify-content: center;
@@ -43,7 +44,7 @@ h1, h2, h3 {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Display links side-by-side on desktop */
+    display: flex;
 }
 
 .nav-list li a {
@@ -58,7 +59,7 @@ h1, h2, h3 {
 }
 
 .menu-toggle {
-    display: none; /* Hide the menu button on desktop */
+    display: none;
     background: none;
     border: none;
     color: #fff;
@@ -67,7 +68,6 @@ h1, h2, h3 {
     padding: 10px 15px;
 }
 
-/* About Section and Images*/
 .profile-image {
     max-width: 300px;
     height: auto;
@@ -77,24 +77,24 @@ h1, h2, h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/*Interests Section */
 .lists-container {
     display: flex;
     gap: 40px;
 }
 
-.ordered-list, .unordered-list {
+.ordered-list,
+.unordered-list {
     flex: 1;
 }
 
-/*Table Styling*/
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
@@ -114,8 +114,6 @@ tfoot td {
     background-color: #e9ecef;
 }
 
-
-/*Flexbox Layout*/
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -128,15 +126,13 @@ tfoot td {
     padding: 20px;
     background-color: #add8e6;
     color: #333;
-    flex-grow: 1; /* Allows boxes to grow and take equal space */
+    flex-grow: 1;
     text-align: center;
 }
 
-/*Grid Layout*/
 .grid-container {
     display: grid;
-    /* Create 3 equal columns, repeat(3, 1fr) */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 10px;
     border: 2px solid #28a745;
@@ -149,79 +145,81 @@ tfoot td {
     text-align: center;
 }
 
-/*Simple Responsive Columns*/
+
 .responsive-container {
     display: flex;
     gap: 20px;
 }
 
 .column {
-    flex: 1; /* Distributes space equally */
+    flex: 1;
     padding: 15px;
     background-color: #ffc107;
     text-align: center;
 }
 
-/*Responsive Image*/
 .responsive-image {
-    max-width: 100%; /* Image will scale down if necessary */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px;
-}
+    max-width: 250px;
+    height: auto;
+    align-items: center;
+    border-radius: 8px;}
 
-form {
-    background: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
 
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-/* Tablets and small desktops (smaller than 768px) */
-.media-query-box {
-      padding: 20px;
-      text-align: center;
+    form {
+        background: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
     }
-    
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .media-query-box {
+        padding: 20px;
+        text-align: center;
+    }
+
     @media (max-width: 600px) {
-      .media-query-box {
-        background-color: lightcoral;
-      }
+        .media-query-box {
+            background-color: lightcoral;
+        }
     }
-    
+
     @media (min-width: 601px) {
-      .media-query-box {
-        background-color: lightblue;
-      }
+        .media-query-box {
+            background-color: lightblue;
+        }
     }
